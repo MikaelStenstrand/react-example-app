@@ -11,6 +11,7 @@ class App extends Component {
           <p>
             This is my awesome app!
           </p>
+          <p>THIS HAS BEEN CHANGED IN MASTER</p>
           <a
             className="App-link"
             href="https://reactjs.org"
