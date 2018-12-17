@@ -30,3 +30,27 @@
     transform: rotate(360deg);
   }
 }
+
+#navigation .navbar-light .navbar-nav .nav-link.disabled {
+  color: yellow;
+}
+
+#right-panel  {
+  background: lightgoldenrodyellow;
+}
+
+#left-panel {
+  background: yellow;
+}
+
+#footer {
+  background: lightcoral;
+  position: fixed;
+  bottom: 0;
+  min-height: 100px;
+}
+@media only screen and (max-width: 576px) {
+  #footer {
+    position: relative;
+  }
+}
