@@ -6,7 +6,7 @@ const data = {
   email: 'myemail@mail.com'
 }; 
 
-class MyComponent extends Component {  
+export default class MyComponent extends Component {  
   render() {
     return (
       <div className="my-component">
@@ -20,4 +20,3 @@ class MyComponent extends Component {
   }
 }
 
-export default MyComponent;

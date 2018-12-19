@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AnotherComponent extends Component {
+export default class AnotherComponent extends Component {
   
   render() {
     return (
@@ -12,5 +12,3 @@ class AnotherComponent extends Component {
     );
   }
 }
-
-export default AnotherComponent;

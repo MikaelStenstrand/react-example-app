@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RightPanel extends Component {  
+export default class RightPanel extends Component {  
   render() {
     return (
       <div id="right-panel" className={this.props.className}>
@@ -9,5 +9,3 @@ class RightPanel extends Component {
     );
   }
 }
-
-export default RightPanel;
