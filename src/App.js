@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import {sum, subtract, multiply, divide} from './scripts/math';
 import './App.css';
 import MyComponent from './components/MyComponent.js';
 import Navigation from './components/Navigation.js';
 import LeftPanel from './components/LeftPanel.js';
 import RightPanel from './components/RightPanel.js';
+import CenterComponent from './components/CenterComponent.js';
 import Footer from './components/Footer.js';
 
-class App extends Component {
-  
+export default class App extends Component {
+  constructor(props)  {
+    super(props);
+    this.state = {
+      isVisible: false,
+    }
+  }
+
+  toggleVisibility() {
+    console.log("toggleVisibility");
+    this.setState({
+      isVisible: !this.state.isVisible
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -24,14 +37,15 @@ class App extends Component {
               <p>5 / 5 = {divide(5,5)}</p>
               <p>MORE TEXT</p>
               <MyComponent />
-
+              <button 
+                id="visibility-button"
+                onClick={() => this.toggleVisibility()}>test button</button>
             </RightPanel>
           </div>
         </div>
+        {this.state.isVisible ? <CenterComponent /> : ''}
         <Footer />
       </div>
     );
   }
 }
-
-export default App;
